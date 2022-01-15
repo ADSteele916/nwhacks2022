@@ -2,7 +2,6 @@ import openai
 import os
 import file_parser
 from pathlib import Path
-
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 class StudentFunctions():
@@ -96,5 +95,5 @@ class StudentFunctions():
 
 if __name__ == "__main__":
     sf = StudentFunctions()
-    code = file_parser.file_path_to_code_string(Path("examples/solution.py"))
-    print(sf.get_summary(code))
+    code = file_parser.file_path_to_code_string(Path("examples/submission_invalid.py"))
+    print(sf.get_python_docstring(code))
