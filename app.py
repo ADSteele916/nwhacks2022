@@ -11,6 +11,14 @@ app.config["UPLOAD_FOLDER"] = "static/"
 def upload_file():
     return render_template('index.html')
 
+@app.route('/student')
+def student_page():
+    return render_template('student.html')
+
+@app.route('/teacher')
+def teacher_page():
+    return render_template('teacher.html')
+
 
 @app.route('/display', methods = ['GET', 'POST'])
 def display_file():
