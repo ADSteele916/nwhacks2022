@@ -34,6 +34,11 @@ def compare_submission_solution(
     )
 
 
+def is_passing(comparison_output: Tuple[float, float, float]) -> bool:
+    starter_similarity, solution_similarity, score = comparison_output
+    return score > 0 and solution_similarity > 10
+
+
 if __name__ == "__main__":
     starter = Path("examples/starter.py")
     submission_random = Path("examples/submission_random_garbage.py")
@@ -52,7 +57,5 @@ if __name__ == "__main__":
         submission_indent_error,
         solution,
     ):
-        starter_similarity, solution_similarity, score = compare_submission_solution(
-            starter, file, solution
-        )
-        print(f"{starter_similarity}, {solution_similarity}; Score = {score}")
+        output = compare_submission_solution(starter, file, solution)
+        print(f"{file.name}: {output}; Passing = {is_passing(output)}")
