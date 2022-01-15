@@ -27,10 +27,11 @@ def compare_submission_solution(
 
 if __name__ == "__main__":
     starter = Path("examples/starter.py")
+    submission_wrong = Path("examples/submission_wrong_function.py")
     submission_recur = Path("examples/submission_recur.py")
     submission_invalid = Path("examples/submission_invalid.py")
-    submission_wrong = Path("examples/submission_wrong_function.py")
+    submission_indent_error = Path("examples/submission_indent_error.py")
     solution = Path("examples/solution.py")
 
-    for file in (submission_recur, submission_invalid, submission_wrong):
+    for file in (submission_wrong, submission_recur, submission_invalid, submission_indent_error):
         print(compare_submission_solution(starter, file, solution))
