@@ -2,6 +2,7 @@
 from flask import Flask, render_template, request
 from werkzeug.utils import secure_filename
 from comparisons.file_parser import file_text_to_code_string
+from comparisons.comparison_funcs import compare_submission_solution, is_passing
 
 app = Flask(__name__)
 
@@ -30,11 +31,15 @@ def display_file():
         filename2 = secure_filename(f2.filename)
 
         f1.save(app.config['UPLOAD_FOLDER'] + filename1)
+        f2.save(app.config['UPLOAD_FOLDER'] + filename2)
 
-        file = open(app.config['UPLOAD_FOLDER'] + filename1,"r")
-        content = file_text_to_code_string(file)
+        file1 = open(app.config['UPLOAD_FOLDER'] + filename1,"r")
+        file2 = open(app.config['UPLOAD_FOLDER'] + filename2,"r")
+        submission = file_text_to_code_string(file1)
+        solution = file_text_to_code_string(file2)
+        results = compare_submission_solution(prompt, submission, solution)
         
-    return render_template('teacher.html', content=content) 
+    return render_template('results.html', content=results) 
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=5000, debug = True)
