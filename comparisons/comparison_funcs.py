@@ -10,13 +10,8 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 
 
 def compare_submission_solution(
-    starter_file: Path, submission_file: Path, solution_file: Path
+    starter: str, submission: str, solution: str
 ) -> Tuple[float, float, float]:
-    starter, submission, solution = (
-        file_path_to_code_string(starter_file),
-        file_path_to_code_string(submission_file),
-        file_path_to_code_string(solution_file),
-    )
 
     engine = openai.Engine("davinci-codex")
 
@@ -57,5 +52,9 @@ if __name__ == "__main__":
         submission_indent_error,
         solution,
     ):
-        output = compare_submission_solution(starter, file, solution)
+        output = compare_submission_solution(
+            file_path_to_code_string(starter),
+            file_path_to_code_string(file),
+            file_path_to_code_string(solution),
+        )
         print(f"{file.name}: {output}; Passing = {is_passing(output)}")
