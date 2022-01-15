@@ -28,7 +28,7 @@
             <input type="file" id="file_one" onclick="codeComp()"><br>
             <input type="submit">
             <script>
-                var loadFile = function(event) {
+                function codeComp() {
                     var file = document.getElementById('file_one');
                     file.src = URL.createObjectURL(event.target.files[0]);
                 };
