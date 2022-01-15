@@ -23,19 +23,18 @@
             <button class="submit portal">Teacher <a href="teacher.html"></a></button>
         </div>
 
-        <form>
-            <label for="fname">File 1</label><br>
-            <input type="file" id="file_one" onclick="codeComp()"><br>
-            <input type="submit">
-            <script>
-                function codeComp() {
-                    var file = document.getElementById('file_one');
-                    file.src = URL.createObjectURL(event.target.files[0]);
-                };
-            </script>
-            <!-- <label for="lname">File 2</label><br>
-            <input type="file" id="file_two" onclick="codeComp()"><br> -->
-          </form>
+        <form action = "/display" method = "POST" 
+            enctype = "multipart/form-data">
+            Prompt <input type="text" id="prompt" name="prompt">
+            <br><br>
+            Student Solution <input type = "file" name = "file1" />
+            <br><br>
+            Working Solution <input type = "file" name = "file2" />
+            <br><br>
+            <input type = "submit"/>
+            <input type = "reset"/>
+        </form>  
+
     </main>
     
     
