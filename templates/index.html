@@ -18,23 +18,18 @@
         
     </header>
     <main>
+        <center>
+            <p>
+                Welcome to Part Marks! Click on either the student or the teacher
+                portal to begin.
+            </p>
+        </center>
         <div class="button">
-            <button class="submit portal">Student <a href="student.html"></a></button>
-            <button class="submit portal">Teacher <a href="teacher.html"></a></button>
+            <center>
+            <button class="submit portal student"><a href="student.html">Student</a></button>
+            <button class="submit portal teacher"><a href="teacher.html">Teacher</a></button>
+            </center>
         </div>
-
-        <form action = "/display" method = "POST" 
-            enctype = "multipart/form-data">
-            Prompt <input type="text" id="prompt" name="prompt">
-            <br><br>
-            Student Solution <input type = "file" name = "file1" />
-            <br><br>
-            Working Solution <input type = "file" name = "file2" />
-            <br><br>
-            <input type = "submit"/>
-            <input type = "reset"/>
-        </form>  
-
     </main>
     
     
