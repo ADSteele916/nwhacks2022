@@ -13,7 +13,12 @@ def __strip_comments(text: List[str]) -> str:
     return out
 
 
+def file_text_to_code_string(text: str) -> str:
+    text = __strip_comments(text.split("\n"))
+    return re.sub(docstring, "", text)
+
+
 def file_path_to_code_string(file: Path) -> str:
-    with open(file, 'r') as f:
+    with open(file, "r") as f:
         text = __strip_comments(f.readlines())
     return re.sub(docstring, "", text)
