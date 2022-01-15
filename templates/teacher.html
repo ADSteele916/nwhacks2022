@@ -4,9 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="assets/main.css" />
+	<noscript><link rel="stylesheet" href="assets/main.css" /></noscript>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
+    </style>
+    <title></title>
 </head>
 <body>
-    <pre>{{content}}</pre>
+    <header class="innerHeader">
+    </header>
+    <main>
+        <form action = "/display" method = "POST" 
+            enctype = "multipart/form-data">
+            Prompt <input type="text" id="prompt" name="prompt">
+            <br><br>
+            Student Solution <input type = "file" name = "file1" />
+            <br><br>
+            Working Solution <input type = "file" name = "file2" />
+            <br><br>
+            <input type = "submit"/>
+            <input type = "reset"/>
+        </form>  
+    </main>
+    
 </body>
 </html>
