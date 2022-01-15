@@ -12,22 +12,26 @@ class Similarity:
         append = "# Explanation of what the code does\n\n #"
         query = prepend + code + append
         response = openai.Completion.create(
-        engine=self.engine,
-        prompt=query,
-        temperature=0,
-        max_tokens=64,
-        top_p=1.0,
-        frequency_penalty=0.0,
-        presence_penalty=0.0,
-        stop=["#"]
+            engine=self.engine,
+            prompt=query,
+            temperature=0,
+            max_tokens=64,
+            top_p=1.0,
+            frequency_penalty=0.0,
+            presence_penalty=0.0,
+            stop=["#"]
         )
 
         return response
 
-    def get_similarity_score(self, summary_1: str, summary_2: str) -> int:
-        openai.Engine("ada").search(
-            search_model="ada", 
-            query="happy", 
-            max_rerank=5,
-            file="file-Lwjuy0q2ezi00jdpfCbl28CO"
+    def get_similarity_score(self, problem_statement: str, summary_1: str, summary_2: str) -> int:
+        """Returns a positive similarity score usually between 0 and 300. Above 200 is good."""
+        score = openai.Engine(self.engine).search(
+            search_model=self.engine, 
+            query=problem_statement, 
+            max_rerank=2,
+            documents=[summary_1, summary_2]
         )
+
+        return score
+
