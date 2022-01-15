@@ -13,11 +13,6 @@ def strip_comments(text: List[str]) -> str:
     return out
 
 
-def file_path_to_code_string(file: Path) -> str:
-    with open(file, 'r') as f:
-        text = strip_comments(f.readlines())
-    return re.sub(docstring, "", text)
-
 def file_text_to_code_string(file) -> str:
     text = strip_comments(file.readlines())
     return re.sub(docstring, "", text)
