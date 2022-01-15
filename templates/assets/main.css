@@ -1,0 +1,106 @@
+
+/* Color */
+:root {
+    --body-color:#FDEFC2;
+    --upload-button: #D1FFE4;
+    --text-box: #EFFAD9;
+    --header-box: #BDE3BA; 
+    --footer-box: #FFF7D1;
+}
+
+body, h1, h2, h3, html, div{
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    font-family: 'Roboto Slab', serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/* Header, footer, and background */
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--body-color);
+    min-height: 100vh;
+}
+
+
+header {
+    height: 10rem;
+    background-color: var(--header-box);
+}
+
+main {
+    flex: auto;
+}
+
+footer {
+    height: 5rem;
+    background-color: var(--footer-box);
+}
+
+/*h1 and h2s*/
+h1{
+    font-size: 5rem;
+    text-align: center;
+    padding-top: 3rem;
+    letter-spacing: 0.025rem;
+    font-weight: bold;
+    color: #333333;
+
+}
+
+@media screen and (max-width: 480px) {
+
+    html, body {
+        min-width: 320px;
+    }
+
+    }
+
+    html {
+        box-sizing: border-box;
+    }
+
+    *, *:before, *:after {
+        box-sizing: inherit;
+    }
+
+
+/* Text box */
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+input[type=button]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color: var(--upload-box);
+}
+
+/* Buttons */
+/*TRBL*/
+.portal{
+    padding: 1rem 1.5rem 1rem 1.5rem;
+    margin : 5rem 10rem 5rem 10rem;
+    background-color: var(--upload-button);
+}
+
+a:hover{
+    
+}
+
