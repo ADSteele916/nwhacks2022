@@ -1,14 +1,21 @@
+/*scrolling*/
+html { overflow-y: scroll; overflow-x:hidden; }
+body { position: absolute; }
+
 
 /* Color */
 :root {
     --body-color:#FDEFC2;
     --upload-button: #D1FFE4;
+    /* --hover: #90c2a5; */
     --text-box: #EFFAD9;
     --header-box: #BDE3BA; 
     --footer-box: #FFF7D1;
+    --font-color: #333333;
+    --hover: #A6D6FF;
 }
 
-body, h1, h2, h3, html, div{
+body, h1, h2, h3, html, div, a, p, form{
     margin: 0;
 	padding: 0;
 	border: 0;
@@ -16,6 +23,7 @@ body, h1, h2, h3, html, div{
 	font: inherit;
 	vertical-align: baseline;
     font-family: 'Roboto Slab', serif;
+    font-weight: bold;
 }
 
 html, body {
@@ -38,6 +46,12 @@ header {
     height: 10rem;
     background-color: var(--header-box);
 }
+
+.innerHeader{
+    height: 6rem;
+}
+
+
 
 main {
     flex: auto;
@@ -75,6 +89,11 @@ h1{
         box-sizing: inherit;
     }
 
+    p {
+        margin-top: 1.5rem;
+        font-weight: bold;
+    }
+
 
 /* Text box */
 input[type=text] {
@@ -90,17 +109,49 @@ input[type=button]{
     margin: 8px 0;
     box-sizing: border-box;
     background-color: var(--upload-box);
+    
 }
 
 /* Buttons */
 /*TRBL*/
 .portal{
-    padding: 1rem 1.5rem 1rem 1.5rem;
-    margin : 5rem 10rem 5rem 10rem;
+    padding: 2rem 3rem 2rem 3rem;
+    margin-top: 5rem;
     background-color: var(--upload-button);
+    font-size: x-large;
+    font-weight: bold;
+    border-radius: 20px;
 }
 
-a:hover{
-    
+.portal.student {
+    margin-right: 2rem;
 }
+
+.portal.teacher{
+    margin-left: 2rem;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.portal:hover{
+    background-color: var(--hover);
+    font-weight: bolder;
+}
+
+
+/*prompt*/
+
+#prompt{
+    height: 200px; 
+    font-size: medium; 
+}
+
+.formStyle{
+    margin-left: 2rem;
+    margin-top: 2rem;
+}
+
 
