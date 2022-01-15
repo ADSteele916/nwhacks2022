@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/main.css" />
+	<noscript><link rel="stylesheet" href="assets/main.css" /></noscript>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
+    </style>
+    <title></title>
+</head>
+
+<body>
+    <header>
+        <h1>Part Marks</h1>
+        
+    </header>
+    <main>
+        <div class="button">
+            <button class="submit portal">Student <a href="student.html"></a></button>
+            <button class="submit portal">Teacher <a href="teacher.html"></a></button>
+        </div>
+
+        <form>
+            <label for="fname">File 1</label><br>
+            <input type="file" id="file_one" onclick="codeComp()"><br>
+            <input type="submit">
+            <script>
+                var loadFile = function(event) {
+                    var file = document.getElementById('file_one');
+                    file.src = URL.createObjectURL(event.target.files[0]);
+                };
+            </script>
+            <!-- <label for="lname">File 2</label><br>
+            <input type="file" id="file_two" onclick="codeComp()"><br> -->
+          </form>
+    </main>
+    
+    
+</body>
+</html>
