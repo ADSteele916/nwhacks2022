@@ -22,11 +22,11 @@ body { position: absolute; }
 }
 
 html::-webkit-scrollbar {
-    width: 20px; 
+    width: 15px; 
  }
 
 html::-webkit-scrollbar-track {
-  background-color: black;
+  background-color: transparent;
 }
 
 html::-webkit-scrollbar-thumb {
@@ -253,7 +253,8 @@ ul#menu li {
 
 .code-boxes {
     display: flex;
-    align-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 pre {
@@ -268,6 +269,7 @@ pre {
     white-space: -o-pre-wrap;    /* Opera 7 */
     word-wrap: break-word;      /* Internet Explorer 5.5+ */
     overflow: auto;
+    width: 350px;
 }
 
 span.keep-together{
