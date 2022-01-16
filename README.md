@@ -10,7 +10,7 @@ Ideally, an autograder would be able to tell that a student is writing code that
 
 ### Student
 
-
+In order to guide students in their code implementation and debugging process, our program offers 6 different functions. There are bug fixers, docstring generators and tools to improve code quality and conciseness by converting length for-loops into compact maps or list comprehensions. The docstring generator is very helpful for students to understand the functionality of cryptic and poorly documented code. Moreover, the time complexity calculator can be used as a revision tool by CS students.
 
 ## Technology
 
