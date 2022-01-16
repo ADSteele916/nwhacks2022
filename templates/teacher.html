@@ -17,14 +17,28 @@
     <main class ="mainBox">
         <form action = "/display" method = "POST" 
             enctype = "multipart/form-data">
-            Starter <input type = "file" name = "starter" />
+            Prompt <br>
+            <input class="textPrompt" type="text" id="prompt" 
+            style="width: 400px"  style="height: 200px"
+            name="prompt">
             <br><br>
-            Student Solution <input type = "file" name = "file1" />
+            Student Solution 
+
+            <input type = "file" name = "file1" 
+            id="fileUpload"/><label for="fileUpload">Choose File</label>
+            
             <br><br>
-            Working Solution <input type = "file" name = "file2" />
+            Working Solution <input type = "file" name = "file2" 
+            id="fileUpload" /><label for="fileUpload">Choose File</label>
+            
             <br><br>
-            <input type = "submit"/>
-            <input type = "reset"/>
+            <input type = "submit" class="submitBtn"/>
+            <input type = "reset" class="resetBtn"/>
+
+            <form action="yourScript">
+                <input type="file" multiple onchange="showType(this)">
+                <input type="submit">
+            </form>
         </form>  
     </main>
     
