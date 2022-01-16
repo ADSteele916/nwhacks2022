@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/main.css" />
-	<noscript><link rel="stylesheet" href="assets/main.css" /></noscript>
+    <link rel="stylesheet" href="../static/assets/main.css" />
+	<noscript><link rel="stylesheet" href="../static/assets/main.css" /></noscript>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
     </style>
@@ -14,20 +14,31 @@
 <body>
     <header class="innerHeader">
     </header>
-    <main>
+    <main class="mainBox">
         <form action = "/display" method = "POST" 
-            enctype = "multipart/form-data" class= "formStyle">
+            enctype = "multipart/form-data">
             Prompt <br>
             <input class="textPrompt" type="text" id="prompt" 
-            style="width: 500px"  style="height: 200px"
+            style="width: 400px"  style="height: 200px"
             name="prompt">
             <br><br>
-            Student Solution <input type = "file" name = "file1" class="fileUpload"/>
+            Student Solution 
+
+            <input type = "file" name = "file1" 
+            id="fileUpload"/><label for="fileUpload">Choose File</label>
+            
             <br><br>
-            Working Solution <input type = "file" name = "file2" class="fileUpload"/>
+            Working Solution <input type = "file" name = "file2" 
+            id="fileUpload" /><label for="fileUpload">Choose File</label>
+            
             <br><br>
             <input type = "submit" class="submitBtn"/>
             <input type = "reset" class="resetBtn"/>
+
+            <form action="yourScript">
+                <input type="file" multiple onchange="showType(this)">
+                <input type="submit">
+            </form>
         </form>  
     </main>    
 </body>

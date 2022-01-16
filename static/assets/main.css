@@ -13,6 +13,8 @@ body { position: absolute; }
     --footer-box: #FFF7D1;
     --font-color: #333333;
     --hover: #A6D6FF;
+    --fileUpload: #A7C9C0;
+    --fileUploadHover: #A7C8C9;
 }
 
 body, h1, h2, h3, html, div, a, p, form{
@@ -145,13 +147,50 @@ a{
 /*prompt*/
 
 #prompt{
-    height: 200px; 
+    height: 150px; 
     font-size: medium; 
+    background-color: oldlace;
+    border-style:solid;
+    border-radius: 5px;
 }
 
-.formStyle{
+.mainBox{
     margin-left: 2rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
+    font-size: 90%;
+    letter-spacing: 0.02rem;
 }
+
+label{
+    background-color: var(--fileUpload);
+    padding: 0.3rem;
+    font-family: 'Roboto Slab', serif;
+    border-radius: 0.3rem;
+    border-style: solid;
+    cursor: pointer;
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+}
+
+label:hover {
+    background-color: var(--fileUploadHover);
+}
+
+
+.fileUpload {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+
+input[type="file"]{
+    display: none;
+}
+
+
 
 
