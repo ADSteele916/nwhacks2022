@@ -18,25 +18,22 @@
     <main class="mainBox">
         <form action = "/display" method = "POST" 
             enctype = "multipart/form-data">
-            Prompt <br>
-            <textarea class="textPrompt" id="prompt" rows="50"
-            cols="40"></textarea>
             <!-- <input class="textPrompt" type="text" id="prompt" 
             style="width: 400px"  style="height: 200px"
             name="prompt"> -->
-            <br><br>
-            Student Solution 
-
-            <input type = "file" name = "file1" 
-            /><label for="fileUpload">Choose File</label>
+            <center>
+            <ul id="menu">
+                <li> Upload Code: 
+                <input type = "file" name = "file1" id="1"
+                /><label for="1">Choose File</label></li>
+                <li>Select Funtionality: </li>
+            </ul>
             
             <br><br>
-            Working Solution <input type = "file" name = "file2" 
-            /><label for="fileUpload">Choose File</label>
             
-            <br><br>
-            <input type = "submit" class="Btn"/>
-            <input type = "reset" class="Btn"/>
+            <input type = "submit" class="Btn student"/>
+            <input type = "reset" class="Btn student"/>
+            </center>
         </form>  
     </main>    
 </body>
