@@ -21,7 +21,8 @@ body { position: absolute; }
     --homeHover: #d39e97;
 }
 
-body, h1, h2, h3, html, div, a, p, form{
+body, h1, h2, h3, html, div, a, p, form
+li, ul{
     margin: 0;
 	padding: 0;
 	border: 0;
@@ -177,6 +178,7 @@ label{
     cursor: pointer;
     margin-top: 1rem;
     margin-left: 0.5rem;
+    margin-right: 2rem;
 }
 
 label:hover {
@@ -214,11 +216,11 @@ input[type="file"]{
     margin-left: 1rem;
     margin-top: 2rem;
     padding: 0.5rem 0.8rem 0.5rem 0.8rem;
-    background-color: var(--home);
+    background-color: var(--homeHover);
 }
 
 .Btn.homeBtn:hover{
-    background-color: var(--homeHover);
+    background-color: var(--home);
 }
 
 
@@ -226,6 +228,14 @@ input[type="file"]{
     background-color: var(--submitHover);
 }
 
+.Btn.student{
+    padding: 0.7rem 1rem 0.7rem 1rem;
+}
+
+ul#menu li {
+    display:inline;
+    margin-top: 2rem;
+}
 
 
 
