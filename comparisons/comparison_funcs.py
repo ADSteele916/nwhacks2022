@@ -65,4 +65,6 @@ if __name__ == "__main__":
             file_path_to_code_string(file),
             file_path_to_code_string(solution),
         )
-        print(f"{file.name}: {output}; Passing = {is_passing(output)}")
+        print(
+            f"{file.parent.name}/{file.name}: {output}; Passing = {is_passing(output)}"
+        )
