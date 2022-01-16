@@ -251,6 +251,25 @@ ul#menu li {
     background-color: transparent;
 }
 
+.code-boxes {
+    display: flex;
+    align-content: space-between;
+}
+
+pre {
+    background-color: #FAF9F6;
+    margin: 25px 25px 25px 0;
+    border-radius: 5px;
+    padding: 25px;
+    height: 50vh;
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;      /* Internet Explorer 5.5+ */
+    overflow: auto;
+}
+
 span.keep-together{
     white-space: nowrap ;
 }
