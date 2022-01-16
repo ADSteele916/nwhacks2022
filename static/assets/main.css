@@ -12,9 +12,13 @@ body { position: absolute; }
     --header-box: #BDE3BA; 
     --footer-box: #FFF7D1;
     --font-color: #333333;
-    --hover: #A6D6FF;
+    --hover: #97c7ab;
     --fileUpload: #A7C9C0;
-    --fileUploadHover: #A7C8C9;
+    --fileUploadHover: #88aca2;
+    --submit: #91C9A3; 
+    --submitHover: #689977;
+    --home: #FCBEB6; 
+    --homeHover: #d39e97;
 }
 
 body, h1, h2, h3, html, div, a, p, form{
@@ -146,12 +150,15 @@ a{
 
 /*prompt*/
 
-#prompt{
+.textPrompt{
     height: 150px; 
     font-size: medium; 
     background-color: oldlace;
     border-style:solid;
     border-radius: 5px;
+    overflow-wrap: break-word;
+    border-width: 2px; 
+    border-color: black;
 }
 
 .mainBox{
@@ -189,6 +196,34 @@ label:hover {
 
 input[type="file"]{
     display: none;
+}
+
+.Btn{
+    background-color: var(--submit);
+    padding: 0.3rem;
+    font-family: 'Roboto Slab', serif;
+    border-radius: 0.3rem;
+    border-style: solid;
+    cursor: pointer;
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+    font-weight: bold;
+}
+
+.Btn.homeBtn{
+    margin-left: 1rem;
+    margin-top: 2rem;
+    padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+    background-color: var(--home);
+}
+
+.Btn.homeBtn:hover{
+    background-color: var(--homeHover);
+}
+
+
+.Btn:hover{
+    background-color: var(--submitHover);
 }
 
 

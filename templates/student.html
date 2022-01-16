@@ -13,32 +13,30 @@
 </head>
 <body>
     <header class="innerHeader">
+        <a href="index.html"><button class="Btn homeBtn">Home</button></a>
     </header>
     <main class="mainBox">
         <form action = "/display" method = "POST" 
             enctype = "multipart/form-data">
             Prompt <br>
-            <input class="textPrompt" type="text" id="prompt" 
+            <textarea class="textPrompt" id="prompt" rows="50"
+            cols="40"></textarea>
+            <!-- <input class="textPrompt" type="text" id="prompt" 
             style="width: 400px"  style="height: 200px"
-            name="prompt">
+            name="prompt"> -->
             <br><br>
             Student Solution 
 
             <input type = "file" name = "file1" 
-            id="fileUpload"/><label for="fileUpload">Choose File</label>
+            /><label for="fileUpload">Choose File</label>
             
             <br><br>
             Working Solution <input type = "file" name = "file2" 
-            id="fileUpload" /><label for="fileUpload">Choose File</label>
+            /><label for="fileUpload">Choose File</label>
             
             <br><br>
-            <input type = "submit" class="submitBtn"/>
-            <input type = "reset" class="resetBtn"/>
-
-            <form action="yourScript">
-                <input type="file" multiple onchange="showType(this)">
-                <input type="submit">
-            </form>
+            <input type = "submit" class="Btn"/>
+            <input type = "reset" class="Btn"/>
         </form>  
     </main>    
 </body>
