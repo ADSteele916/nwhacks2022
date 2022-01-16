@@ -18,6 +18,14 @@
         <a href='/'><button class="Btn homeBtn">Home</button></a>
         <h1>Au-Déla</h1>
     </header>
-    <pre>The solution is similar: {{content}}</pre>
+    <center>
+        <div style="margin-top:100px;font-size:40px;">
+        {% if content == True %}
+            <div>The submitted solution is similar!</div>
+        {% else %}
+            <div>The solution is not similar. Try again.</div>
+        {% endif %}
+        </div>
+    </center>
 </body>
 </html>

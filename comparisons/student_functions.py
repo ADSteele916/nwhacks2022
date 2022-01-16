@@ -22,7 +22,7 @@ class StudentFunctions():
             stop=["\"\"\""]
         )
 
-        return response
+        return response["choices"][0]["text"]
 
     def fix_code(self, code: str) -> str:
         prefix = "##### Fix bugs in the below function\n\n### Buggy Python"
@@ -36,10 +36,10 @@ class StudentFunctions():
             top_p = 1.0,
             frequency_penalty=0.0,
             presence_penalty = 0.0,
-            stop=["###"]
+            stop=["###", "#"]
         )
 
-        return response
+        return response["choices"][0]["text"]
 
     def get_time_complexity(self, code: str) -> str:
         affix = "\"\"\"\nThe time complexity of this function is"
@@ -55,7 +55,7 @@ class StudentFunctions():
             stop=["\n"]
         )
 
-        return response
+        return response["choices"][0]["text"]
 
     def get_python_docstring(self, code: str) -> str:
         """Only works with Python 3.7"""
@@ -73,7 +73,7 @@ class StudentFunctions():
             stop=["#", "\"\"\""]
         )
 
-        return response
+        return response["choices"][0]["text"]
 
     def convert_loop_to_python_stream(self, code: str) -> str:
         # don't know if this will work
@@ -88,10 +88,10 @@ class StudentFunctions():
             top_p = 1.0,
             frequency_penalty=0.0,
             presence_penalty = 0.0,
-            stop=["###"]
+            stop=["###", "#"]
         )
 
-        return response
+        return response["choices"][0]["text"]
 
     def convert_list_comprehension_to_loop(self, code: str) -> str:
         # don't know if this will work
@@ -106,10 +106,10 @@ class StudentFunctions():
             top_p = 1.0,
             frequency_penalty=0.0,
             presence_penalty = 0.0,
-            stop=["###"]
+            stop=["###", "#"]
         )
 
-        return response
+        return response["choices"][0]["text"]
 
     def convert_loop_to_list_comprehension(self, code: str) -> str:
         # don't know if this will work
@@ -124,10 +124,10 @@ class StudentFunctions():
             top_p = 1.0,
             frequency_penalty=0.0,
             presence_penalty = 0.0,
-            stop=["###"]
+            stop=["###", "#"]
         )
 
-        return response
+        return response["choices"][0]["text"]
 
 # if __name__ == "__main__":
 #     sf = StudentFunctions()

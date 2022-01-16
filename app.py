@@ -45,12 +45,7 @@ def student_stuff():
 
     if request.files['student_file']:
         code = request.files['student_file']
-        code_name = secure_filename(code.filename)
-        code.save(app.config['UPLOAD_FOLDER'] + code_name)
-        code_file = open(app.config['UPLOAD_FOLDER'] + code_name,"r")
-        code_text = file_text_to_code_string(code_file)
-
-        #method = request.form.getlist('options')
+        code_text = file_text_to_code_string(code)
 
         result = {
             'fix': lambda code_text: StudentFunctions().fix_code(code_text),
@@ -64,8 +59,6 @@ def student_stuff():
         print(user_answer)
 
     return render_template('results_student.html', content = result) 
-
-
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=5000, debug = True)
