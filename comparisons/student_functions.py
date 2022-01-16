@@ -1,6 +1,6 @@
 import openai
 import os
-import file_parser
+#import file_parser
 from pathlib import Path
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
@@ -129,7 +129,7 @@ class StudentFunctions():
 
         return response
 
-if __name__ == "__main__":
-    sf = StudentFunctions()
-    code = file_parser.file_path_to_code_string(Path("examples/submission_for_loop_for_list.py"))
-    print(sf.convert_loop_to_list_comprehension(code))
+# if __name__ == "__main__":
+#     sf = StudentFunctions()
+#     code = file_parser.file_path_to_code_string(Path("examples/submission_for_loop_for_list.py"))
+#     print(sf.convert_loop_to_list_comprehension(code))
