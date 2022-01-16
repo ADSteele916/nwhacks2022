@@ -264,7 +264,7 @@ pre {
     margin: 25px 25px 25px 0;
     border-radius: 5px;
     padding: 25px;
-    height: 50vh;
+    height: 500px;
     white-space: pre-wrap;       /* Since CSS 2.1 */
     white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
     white-space: -pre-wrap;      /* Opera 4-6 */
@@ -272,7 +272,15 @@ pre {
     word-wrap: break-word;      /* Internet Explorer 5.5+ */
     overflow: auto;
     width: 350px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Roboto Mono', Courier, monospace !important;
+}
+
+.hljs {
+    background-color: inherit !important;
+}
+
+code {
+    font-family: 'Roboto Mono', Courier, monospace !important;
 }
 
 pre::-webkit-scrollbar {
