@@ -67,12 +67,6 @@ header {
     background-color: var(--header-box);
 }
 
-.innerHeader{
-    height: 6rem;
-}
-
-
-
 main {
     flex: auto;
 }
@@ -217,8 +211,9 @@ input[type="file"]{
 }
 
 .Btn.homeBtn{
-    margin-left: 1rem;
-    margin-top: 2rem;
+    position: absolute;
+    left: 20px;
+    top: 20px;
     padding: 0.5rem 0.8rem 0.5rem 0.8rem;
     background-color: var(--homeHover);
 }
