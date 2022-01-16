@@ -16,11 +16,17 @@ In order to guide students in their code implementation and debugging process, o
 
 
 ***Fix Code:*** Fixes syntactical errors in python code
+
 ***Time Complexity:*** Computes the time complexity of submitted snippet
+
 ***Py Docstring:*** Generates a Doc string for code
+
 ***Loop to PyStream:*** Converts Python for loops into streams
+
 ***Loop to List:*** Deduces the functional programming solution for a given algorithmic solution
+
 ***List to Loop:*** Deduces the iterative solution for a complementary functional programming solution
+
 
 
 ## Technology
