@@ -12,9 +12,11 @@ body { position: absolute; }
     --header-box: #BDE3BA; 
     --footer-box: #FFF7D1;
     --font-color: #333333;
-    --hover: #A6D6FF;
+    --hover: #97c7ab;
     --fileUpload: #A7C9C0;
-    --fileUploadHover: #A7C8C9;
+    --fileUploadHover: #88aca2;
+    --submit: #91C9A3; 
+    --submitHover: #689977;
 }
 
 body, h1, h2, h3, html, div, a, p, form{
@@ -189,6 +191,22 @@ label:hover {
 
 input[type="file"]{
     display: none;
+}
+
+.Btn{
+    background-color: var(--submit);
+    padding: 0.3rem;
+    font-family: 'Roboto Slab', serif;
+    border-radius: 0.3rem;
+    border-style: solid;
+    cursor: pointer;
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+    font-weight: bold;
+}
+
+.Btn:hover{
+    background-color: var(--submitHover);
 }
 
 
