@@ -11,11 +11,12 @@
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="{{url_for('static', filename='js/main.js')}}" type="text/javascript"></script>
-    <title></title>
+    <title>Part Marks</title>
 </head>
 <body>
-    <header class="innerHeader">
+    <header>
         <a href='/'><button class="Btn homeBtn">Home</button></a>
+        <h1>Part Marks</h1>
     </header>
     <main class="mainBox">
         <form action = "/student_results" method = "POST" 
@@ -36,7 +37,7 @@
                         <p></p>
                     </div>
                     <div style="padding: 25px 25px">
-                        Select Functionality
+                        Select Functionality:
                     </div>
                     <div>
                         <input type="radio" id="fix" name="functions" value="fix">
