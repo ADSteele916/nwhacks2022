@@ -78,7 +78,43 @@ class StudentFunctions():
     def convert_loop_to_python_stream(self, code: str) -> str:
         # don't know if this will work
         prefix = "##### Convert python loop to functional programming\n\n### Python with loop"
-        affix = '\n### Python with functional programming (map, filter, reduce)'
+        affix = '\n### Python with functional programming'
+        query = prefix + code + affix
+        response = openai.Completion.create(
+            engine = self.engine,
+            prompt = query,
+            temperature = 0,
+            max_tokens = 128,
+            top_p = 1.0,
+            frequency_penalty=0.0,
+            presence_penalty = 0.0,
+            stop=["###"]
+        )
+
+        return response
+
+    def convert_list_comprehension_to_loop(self, code: str) -> str:
+        # don't know if this will work
+        prefix = "##### Convert list comprehension to for loop\n\n### Python with list comprehension"
+        affix = '\n### Python with for loop'
+        query = prefix + code + affix
+        response = openai.Completion.create(
+            engine = self.engine,
+            prompt = query,
+            temperature = 0,
+            max_tokens = 128,
+            top_p = 1.0,
+            frequency_penalty=0.0,
+            presence_penalty = 0.0,
+            stop=["###"]
+        )
+
+        return response
+
+    def convert_loop_to_list_comprehension(self, code: str) -> str:
+        # don't know if this will work
+        prefix = "##### Convert for loop to list comprehension\n\n### Python with for loop"
+        affix = '\n### Python with list comprehension'
         query = prefix + code + affix
         response = openai.Completion.create(
             engine = self.engine,
@@ -95,5 +131,5 @@ class StudentFunctions():
 
 if __name__ == "__main__":
     sf = StudentFunctions()
-    code = file_parser.file_path_to_code_string(Path("examples/fibonacci/submission_invalid.py"))
-    print(sf.get_python_docstring(code))
+    code = file_parser.file_path_to_code_string(Path("examples/submission_for_loop_for_list.py"))
+    print(sf.convert_loop_to_list_comprehension(code))
