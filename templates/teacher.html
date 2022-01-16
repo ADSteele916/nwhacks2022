@@ -15,6 +15,7 @@
 </head>
 <body>
     <header class="innerHeader">
+        <a href="index.html"><button class="Btn homeBtn">Home</button></a>
     </header>
     <main class ="mainBox">
         <form action = "/display" method = "POST" 
@@ -23,6 +24,14 @@
             <input class="textPrompt" type="text" id="prompt" 
             style="width: 400px"  style="height: 200px"
             name="prompt">
+
+            <div>
+                Starter:
+                <label for="starter_sol">Choose File</label>
+                <input type="file" name = "file0"
+                id="starter_sol" class="file-upload" style="display:none;"/>
+                <p style="display:inline"></p>
+            </div>
 
             <div>
                 Student Solution:
@@ -41,14 +50,26 @@
             </div>
             
             <br><br>
-            <input type = "submit" class="submitBtn"/>
-            <input type = "reset" class="resetBtn"/>
-
-            <form action="yourScript">
-                <input type="file" multiple onchange="showType(this)">
-                <input type="submit">
-            </form>
+            <input type = "submit" class="Btn"/>
+            <input type = "reset" class="Btn"/>
         </form>  
     </main>
 </body>
 </html>
+
+<!-- <main>
+    <form action = "/display" method = "POST" 
+        enctype = "multipart/form-data">
+        Starter <input type = "file" name = "starter" />
+        <br><br>
+        Student Solution <input type = "file" name = "file1" />
+        <br><br>
+        Working Solution <input type = "file" name = "file2" />
+        <br><br>
+        <input type = "submit"/>
+        <input type = "reset"/>
+    </form>  
+</main>
+
+</body>
+</html> -->
