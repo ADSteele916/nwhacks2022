@@ -1,11 +1,15 @@
-from re import L
-
 from flask import Flask, render_template, request
-from werkzeug.utils import secure_filename
 
-from comparisons.comparison_funcs import compare_submission_solution, is_passing
+from comparisons.comparison_functions import compare_submission_solution, is_passing
 from comparisons.file_parser import file_text_to_code_string
-from comparisons.student_functions import StudentFunctions
+from comparisons.student_functions import (
+    convert_list_comprehension_to_loop,
+    convert_loop_to_list_comprehension,
+    convert_loop_to_python_stream,
+    fix_code,
+    get_python_docstring,
+    get_time_complexity,
+)
 
 app = Flask(__name__)
 
@@ -54,20 +58,12 @@ def student_stuff():
         code_text = file_text_to_code_string(code)
 
         result = {
-            "fix": lambda code_text: StudentFunctions().fix_code(code_text),
-            "time": lambda code_text: StudentFunctions().get_time_complexity(code_text),
-            "docstring": lambda code_text: StudentFunctions().get_python_docstring(
-                code_text
-            ),
-            "stream": lambda code_text: StudentFunctions().convert_loop_to_python_stream(
-                code_text
-            ),
-            "list": lambda code_text: StudentFunctions().convert_list_comprehension_to_loop(
-                code_text
-            ),
-            "loop": lambda code_text: StudentFunctions().convert_loop_to_list_comprehension(
-                code_text
-            ),
+            "fix": fix_code,
+            "time": get_time_complexity,
+            "docstring": get_python_docstring,
+            "stream": convert_loop_to_python_stream,
+            "list": convert_list_comprehension_to_loop,
+            "loop": convert_loop_to_list_comprehension,
         }[user_answer](code_text)
 
         print(user_answer)
