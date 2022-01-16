@@ -18,7 +18,7 @@ Our implementation uses OpenAI's Python API and a Flask backend.
 
 ## Running
 
-Unfortunately, OpenAI doesn't allow projects using GPT-3 to be published without approval, which takes around two weeks. We are, however, allowed to share pre-generated results, as we did in our demonstration video. Additionally, if you have an API key, you are free to run our code and verify our results. Simply clone the repository, add your key as an environment variable named `OPENAI_API_KEY`, and run `comparisons/comparison_funcs.py`. Here are the expected results:
+Unfortunately, OpenAI doesn't allow projects using GPT-3 to be published without approval, which takes around two weeks. We are, however, allowed to share pre-generated results, as we did in our demonstration video. Additionally, if you have an API key, you are free to run our code and verify our results. Simply clone the repository, add your key as an environment variable named `OPENAI_API_KEY`, and run `comparisons/comparison_functions.py`. Here are the expected results:
 ```
 fibonacci/starter.py: (105.779, 48.065, -57.714); Passing = False
 fibonacci/submission_random_garbage.py: (4.357, 3.657, -0.7000000000000002); Passing = False
