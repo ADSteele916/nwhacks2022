@@ -72,7 +72,7 @@ def student_stuff():
 
         print(user_answer)
 
-    return render_template('results.html', content = user_answer) 
+    return render_template('results.html', content = result) 
 
 
 
