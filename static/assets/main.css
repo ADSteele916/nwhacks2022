@@ -1,5 +1,5 @@
 /*scrolling*/
-html { overflow-y: scroll; overflow-x:hidden; }
+html { overflow-x:hidden; }
 body { position: absolute; }
 
 
@@ -19,6 +19,19 @@ body { position: absolute; }
     --submitHover: #689977;
     --home: #FCBEB6; 
     --homeHover: #d39e97;
+}
+
+html::-webkit-scrollbar {
+    width: 20px; 
+ }
+
+html::-webkit-scrollbar-track {
+  background-color: black;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #4e4e4e;
+  border-radius: 25px;
 }
 
 body, h1, h2, h3, html, div, a, p, form
@@ -145,7 +158,8 @@ a{
 
 .portal:hover{
     background-color: var(--hover);
-    font-weight: bolder;
+    cursor: pointer;
+    /* font-weight: bolder; */
 }
 
 
