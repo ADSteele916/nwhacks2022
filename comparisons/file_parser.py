@@ -11,7 +11,7 @@ def __strip_comments(text: List[str]) -> str:
         try:
             no_comments = line.split("#")[0]
         except TypeError:
-            line = line.decode("utf-8") 
+            line = line.decode("utf-8")
             no_comments = line.split("#")[0]
         out += no_comments
     return out
@@ -20,6 +20,7 @@ def __strip_comments(text: List[str]) -> str:
 def file_text_to_code_string(text: str) -> str:
     text = __strip_comments(text.readlines())
     return re.sub(docstring, "", text)
+
 
 def file_path_to_code_string(file: Path) -> str:
     with open(file, "r") as f:
