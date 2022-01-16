@@ -195,6 +195,7 @@ label{
     margin-right: 2rem;
 }
 
+
 label:hover {
     background-color: var(--fileUploadHover);
 }
@@ -246,6 +247,7 @@ ul#menu li {
     padding: 0; 
     margin: 0;
     background-color: none;
+    color: var(--font-color);
     border: none;
 }
 
