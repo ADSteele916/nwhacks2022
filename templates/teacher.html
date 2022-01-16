@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
     </style>
     <title></title>
+    <script src="{{url_for('static', filename='js/main.js')}}" type="text/javascript"></script>
 </head>
 <body>
     <header class="innerHeader">
@@ -21,15 +23,22 @@
             <input class="textPrompt" type="text" id="prompt" 
             style="width: 400px"  style="height: 200px"
             name="prompt">
-            <br><br>
-            Student Solution 
 
-            <input type = "file" name = "file1" 
-            id="fileUpload"/><label for="fileUpload">Choose File</label>
-            
-            <br><br>
-            Working Solution <input type = "file" name = "file2" 
-            id="fileUpload" /><label for="fileUpload">Choose File</label>
+            <div>
+                Student Solution:
+                <label for="student_sol">Choose File</label>
+                <input type="file" name = "file2" 
+                id="student_sol" class="file-upload" style="display:none;"/>
+                <p style="display:inline"></p>
+            </div>
+
+            <div style="padding: 25px 0;">
+                Working Solution:
+                <label for="working_sol">Choose File</label>
+                <input type="file" name="file1" 
+                id="working_sol" class="file-upload" style="display:none;"/>
+                <p style="display:inline"></p>
+            </div>
             
             <br><br>
             <input type = "submit" class="submitBtn"/>
@@ -41,6 +50,5 @@
             </form>
         </form>  
     </main>
-    
 </body>
 </html>
