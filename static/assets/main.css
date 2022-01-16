@@ -272,6 +272,7 @@ pre {
     word-wrap: break-word;      /* Internet Explorer 5.5+ */
     overflow: auto;
     width: 350px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 pre::-webkit-scrollbar {
