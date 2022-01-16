@@ -1,5 +1,7 @@
 # Au Delà
 
+Our project explores the use of GPT-3's comprehension of code semantics in the setting of CS education. It has two components: a semantic autograder for teachers and a suite of code conversion/documentation tools for students.
+
 ## Summary
 
 ### Teacher
