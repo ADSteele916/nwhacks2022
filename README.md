@@ -14,6 +14,15 @@ Ideally, an autograder would be able to tell that a student is writing code that
 
 In order to guide students in their code implementation and debugging process, our program offers 6 different functions. There are bug fixers, docstring generators and tools to improve code quality and conciseness by converting length for-loops into compact maps or list comprehensions. The docstring generator is very helpful for students to understand the functionality of cryptic and poorly documented code. Moreover, the time complexity calculator can be used as a revision tool by CS students.
 
+
+***Fix Code:*** Fixes syntactical errors in python code
+***Time Complexity:*** Computes the time complexity of submitted snippet
+***Py Docstring:*** Generates a Doc string for code
+***Loop to PyStream:*** Converts Python for loops into streams
+***Loop to List:*** Deduces the functional programming solution for a given algorithmic solution
+***List to Loop:*** Deduces the iterative solution for a complementary functional programming solution
+
+
 ## Technology
 
 Our implementation uses OpenAI's Python API and a Flask backend. We considered using Django but felt that it was unncessarily heavy for our use case.
