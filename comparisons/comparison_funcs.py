@@ -31,17 +31,21 @@ def compare_submission_solution(
 
 def is_passing(comparison_output: Tuple[float, float, float]) -> bool:
     starter_similarity, solution_similarity, score = comparison_output
-    return score > 0 and solution_similarity > 10
+    return score > 0
 
 
 if __name__ == "__main__":
-    starter = Path("examples/starter.py")
-    submission_random = Path("examples/submission_random_garbage.py")
-    submission_wrong = Path("examples/submission_wrong_function.py")
-    submission_recur = Path("examples/submission_recur.py")
-    submission_invalid = Path("examples/submission_invalid.py")
-    submission_indent_error = Path("examples/submission_indent_error.py")
-    solution = Path("examples/solution.py")
+    starter = Path("examples/fibonacci/starter.py")
+    submission_random = Path("examples/fibonacci/submission_random_garbage.py")
+    submission_wrong = Path("examples/fibonacci/submission_wrong_function.py")
+    submission_recur = Path("examples/fibonacci/submission_recur.py")
+    submission_invalid = Path("examples/fibonacci/submission_invalid.py")
+    submission_indent_error = Path("examples/fibonacci/submission_indent_error.py")
+    solution = Path("examples/fibonacci/solution.py")
+    bintree_starter = Path("examples/bintree/starter.py")
+    bintree_submission_iterative = Path("examples/bintree/submission_iterative.py")
+    bintree_submission_alternative = Path("examples/bintree/submission_alternative.py")
+    bintree_solution = Path("examples/bintree/solution.py")
 
     for file in (
         starter,
@@ -51,6 +55,10 @@ if __name__ == "__main__":
         submission_invalid,
         submission_indent_error,
         solution,
+        bintree_starter,
+        bintree_submission_iterative,
+        bintree_submission_alternative,
+        bintree_solution,
     ):
         output = compare_submission_solution(
             file_path_to_code_string(starter),
