@@ -45,7 +45,7 @@ def display_file():
         submission = file_text_to_code_string(file1)
         solution = file_text_to_code_string(file2)
         results = is_passing(compare_submission_solution(starter_text, submission, solution))
-    return render_template('results.html', content=results) 
+    return render_template('results_teacher.html', content=results) 
 
 @app.route('/student_results', methods = ['GET', 'POST'])
 def student_stuff():
@@ -72,7 +72,7 @@ def student_stuff():
 
         print(user_answer)
 
-    return render_template('results.html', content = result) 
+    return render_template('results_student.html', content = result) 
 
 
 
