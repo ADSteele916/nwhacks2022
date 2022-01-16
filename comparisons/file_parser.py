@@ -14,7 +14,7 @@ def __strip_comments(text: List[str]) -> str:
 
 
 def file_text_to_code_string(text: str) -> str:
-    text = __strip_comments(text.split("\n"))
+    text = __strip_comments(text.readlines())
     return re.sub(docstring, "", text)
 
 
