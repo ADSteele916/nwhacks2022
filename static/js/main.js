@@ -10,5 +10,6 @@ $(document).ready(function(){
         };
 
         fileReader.readAsText($(this)[0].files[0], "UTF-8");
+        hljs.initHighlightingOnLoad();
     });
 });

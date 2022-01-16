@@ -4,9 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="../static/assets/main.css" />
+	<noscript><link rel="stylesheet" href="../static/assets/main.css" /></noscript>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{{url_for('static', filename='js/main.js')}}" type="text/javascript"></script>
+    <title>Au-Déla</title>
 </head>
 <body>
-    <pre>{{content}}</pre>
+    <header>
+        <a href='/'><button class="Btn homeBtn">Home</button></a>
+        <h1>Au-Déla</h1>
+    </header>
+    <pre>The solution is similar: {{content}}</pre>
 </body>
 </html>
