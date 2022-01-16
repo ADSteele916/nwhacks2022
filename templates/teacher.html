@@ -18,18 +18,18 @@
     <main class ="mainBox">
         <form action = "/display" method = "POST" 
             enctype = "multipart/form-data">
-            Prompt <br>
-            <textarea class="textPrompt" id="prompt" rows="50"
-            cols="40"></textarea>
+            Starter 
+            <input type = "file" name = "starter" id = "1"/>
+            <label for="1">Choose File</label>
             <br><br>
             Student Solution 
 
-            <input type = "file" name = "file1" 
-            id="1"/><label for="1">Choose File</label>
+            <input type = "file" name = "file1" id = "2"/>
+            <label for="2">Choose File</label>
             
             <br><br>
-            Working Solution <input type = "file" name = "file2" 
-            id="2" /><label for="2">Choose File</label>
+            Working Solution <input type = "file" name = "file2", id = "3"/>
+            <label for="3">Choose File</label>
             
             <br><br>
             <input type = "submit" class="Btn"/>
@@ -39,3 +39,20 @@
     
 </body>
 </html>
+
+<!-- <main>
+    <form action = "/display" method = "POST" 
+        enctype = "multipart/form-data">
+        Starter <input type = "file" name = "starter" />
+        <br><br>
+        Student Solution <input type = "file" name = "file1" />
+        <br><br>
+        Working Solution <input type = "file" name = "file2" />
+        <br><br>
+        <input type = "submit"/>
+        <input type = "reset"/>
+    </form>  
+</main>
+
+</body>
+</html> -->
