@@ -51,6 +51,7 @@ html, body {
     width: 100%;
     padding: 0;
     margin: 0;
+    position: relative;
 }
 
 /* Header, footer, and background */
@@ -67,12 +68,6 @@ header {
     background-color: var(--header-box);
 }
 
-.innerHeader{
-    height: 6rem;
-}
-
-
-
 main {
     flex: auto;
 }
@@ -86,7 +81,7 @@ footer {
 h1{
     font-size: 5rem;
     text-align: center;
-    padding-top: 3rem;
+    padding-top: 3.5rem;
     letter-spacing: 0.025rem;
     font-weight: bold;
     color: #333333;
@@ -217,8 +212,9 @@ input[type="file"]{
 }
 
 .Btn.homeBtn{
-    margin-left: 1rem;
-    margin-top: 2rem;
+    position: absolute;
+    left: 20px;
+    top: 20px;
     padding: 0.5rem 0.8rem 0.5rem 0.8rem;
     background-color: var(--homeHover);
 }
@@ -255,5 +251,8 @@ ul#menu li {
     background-color: transparent;
 }
 
+span.keep-together{
+    white-space: nowrap ;
+}
 
 
