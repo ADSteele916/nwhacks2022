@@ -95,5 +95,5 @@ class StudentFunctions():
 
 if __name__ == "__main__":
     sf = StudentFunctions()
-    code = file_parser.file_path_to_code_string(Path("examples/submission_invalid.py"))
+    code = file_parser.file_path_to_code_string(Path("examples/fibonacci/submission_invalid.py"))
     print(sf.get_python_docstring(code))
