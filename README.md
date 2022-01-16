@@ -14,7 +14,7 @@ In order to guide students in their code implementation and debugging process, o
 
 ## Technology
 
-Our implementation uses OpenAI's Python API and a Flask backend.
+Our implementation uses OpenAI's Python API and a Flask backend. We considered using Django but felt that it was unncessarily heavy for our use case.
 
 ## Running
 
