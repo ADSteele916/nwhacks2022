@@ -19,38 +19,41 @@
         <a href='/'><button class="Btn homeBtn">Home</button></a>
     </header>
     <main class ="mainBox">
-        <center>
         <form action = "/teacher_results" method = "POST" 
             enctype = "multipart/form-data">
-            <div style="padding: 25px 0;">
-                Starter:
-                <label for="starter_sol">Choose File</label>
-                <input type="file" name="starter"
-                id="starter_sol" class="file-upload" style="display:none;"/>
-                <p style="display:inline"></p>
-            </div>
+            <div class="code-boxes">
+                <div style="padding: 25px 0;">
+                    Starter:
+                    <label for="starter_sol">Choose File</label>
+                    <input type="file" name="starter"
+                    id="starter_sol" class="file-upload" style="display:none;"/>
+                    <p style="display:inline"></p>
+                    <pre></pre>
+                </div>
 
-            <div style="padding: 25px 0;">
-                Student Solution:
-                <label for="student_sol">Choose File</label>
-                <input type="file" name="file1" 
-                id="student_sol" class="file-upload" style="display:none;"/>
-                <p style="display:inline"></p>
-            </div>
+                <div style="padding: 25px 0;">
+                    Student Solution:
+                    <label for="student_sol">Choose File</label>
+                    <input type="file" name="file1" 
+                    id="student_sol" class="file-upload" style="display:none;"/>
+                    <p style="display:inline"></p>
+                    <pre></pre>
+                </div>
 
-            <div style="padding: 25px 0;">
-                Working Solution:
-                <label for="working_sol">Choose File</label>
-                <input type="file" name ="file2" 
-                id="working_sol" class="file-upload" style="display:none;"/>
-                <p style="display:inline"></p>
+                <div style="padding: 25px 0;">
+                    Working Solution:
+                    <label for="working_sol">Choose File</label>
+                    <input type="file" name ="file2" 
+                    id="working_sol" class="file-upload" style="display:none;"/>
+                    <p style="display:inline"></p>
+                    <pre></pre>
+                </div>
             </div>
-            
             <br><br>
             <input type="submit" class="Btn"/>
             <input type="reset" class="Btn"/>
         </form>
-        </center>
+        </div>
     </main>
 </body>
 </html>
