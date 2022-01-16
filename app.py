@@ -1,4 +1,5 @@
 
+from re import L
 from flask import Flask, render_template, request
 from werkzeug.utils import secure_filename
 from comparisons.file_parser import file_text_to_code_string
@@ -29,23 +30,13 @@ def display_file():
         starter = request.files['starter']
         f1 = request.files['file1']
         f2 = request.files['file2']
-        starter_name = secure_filename(starter.filename)
-        filename1 = secure_filename(f1.filename)
-        filename2 = secure_filename(f2.filename)
 
-        starter.save(app.config['UPLOAD_FOLDER'] + starter_name)
-        f1.save(app.config['UPLOAD_FOLDER'] + filename1)
-        f2.save(app.config['UPLOAD_FOLDER'] + filename2)
-
-        starter_file = open(app.config['UPLOAD_FOLDER'] + starter_name,"r")
-        file1 = open(app.config['UPLOAD_FOLDER'] + filename1,"r")
-        file2 = open(app.config['UPLOAD_FOLDER'] + filename2,"r")
-
-        starter_text = file_text_to_code_string(starter_file)
-        submission = file_text_to_code_string(file1)
-        solution = file_text_to_code_string(file2)
+        starter_text = file_text_to_code_string(starter)
+        submission = file_text_to_code_string(f1)
+        solution = file_text_to_code_string(f2)
         results = is_passing(compare_submission_solution(starter_text, submission, solution))
-    return render_template('results_teacher.html', content=results) 
+
+    return render_template('results_teacher.html', content=results)
 
 @app.route('/student_results', methods = ['GET', 'POST'])
 def student_stuff():
