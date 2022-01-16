@@ -51,6 +51,7 @@ html, body {
     width: 100%;
     padding: 0;
     margin: 0;
+    position: relative;
 }
 
 /* Header, footer, and background */
@@ -80,7 +81,7 @@ footer {
 h1{
     font-size: 5rem;
     text-align: center;
-    padding-top: 3rem;
+    padding-top: 3.5rem;
     letter-spacing: 0.025rem;
     font-weight: bold;
     color: #333333;
@@ -250,5 +251,8 @@ ul#menu li {
     background-color: transparent;
 }
 
+span.keep-together{
+    white-space: nowrap ;
+}
 
 
